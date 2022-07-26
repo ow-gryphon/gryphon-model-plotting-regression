@@ -1,0 +1,49 @@
+#### COLOURS
+axes.prop_cycle     : cycler('color', ['002C77', '009DE0', '949494', 'DADADA', '275D38', '00AC41', '001A47', '005E86', '595959','838383','173822','006727'])
+                      ## color cycle for plot lines  as list of string
+                      ## colorspecs: single letter, long name, or web-style hex
+
+
+#### AXES
+axes.facecolor      : w       ## axes background color
+axes.edgecolor      : k       ## axes edge color
+axes.linewidth      : 0.8     ## edge linewidth
+axes.grid           : False   ## display grid or not
+axes.grid.axis      : both    ## which axis the grid should apply to
+axes.grid.which     : major   ## gridlines at major, minor or both ticks
+axes.titlesize      : large   ## fontsize of the axes title
+axes.titleweight    : bold  ## font weight of title
+axes.titlepad       : 6.0     ## pad between axes and title in points
+axes.labelsize      : medium  ## fontsize of the x any y labels
+axes.labelpad       : 4.0     ## space between label and axis
+axes.labelweight    : bold   ## weight of the x and y labels
+axes.labelcolor     : k
+axes.axisbelow      : line    ## draw axis gridlines and ticks below
+
+axes.spines.left   : True   ## display axis spines
+axes.spines.bottom : True
+axes.spines.top    : False
+axes.spines.right  : False
+axes.unicode_minus  : True
+
+xtick.top            : False  ## draw ticks on the top side
+xtick.bottom         : False   ## draw ticks on the bottom side
+xtick.labeltop       : False  ## draw label on the top
+xtick.labelbottom    : True   ## draw label on the bottom
+
+ytick.left           : False   ## draw ticks on the left side
+ytick.right          : False  ## draw ticks on the right side
+ytick.labelleft      : True   ## draw tick labels on the left side
+ytick.labelright     : False  ## draw tick labels on the right side
+
+
+#### LEGEND
+
+legend.loc           : best
+legend.frameon       : False     ## if True, draw the legend on a background patch
+legend.framealpha    : 0.8      ## legend patch transparency
+legend.facecolor     : inherit  ## inherit from axes.facecolor; or color spec
+legend.edgecolor     : 0.8     ## background patch boundary color
+legend.fancybox      : False     ## if True, use a rounded box for the
+                                 ## legend background, else a rectangle
+legend.fontsize      : small

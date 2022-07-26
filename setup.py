@@ -11,7 +11,7 @@ with open('metadata.json') as fr:
     metadata = json.load(fr)
 
 setuptools.setup(
-    name="",  # Name of the repository
+    name="gryphon-model-plotting-regression", 
     version="0.0.1",
     author=metadata.get("author", ""),
     author_email=metadata.get("author_email", ""),
@@ -20,6 +20,6 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="",  # Repository URL or externally maintained page
     packages=setuptools.find_packages(),
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     install_requires=requirements,
 )
