@@ -8,3 +8,5 @@ envs/
 
 __pycache__/
 **/__pycache__/
+
+template/notebooks/**/sample_output/
