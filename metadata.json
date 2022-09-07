@@ -10,5 +10,5 @@
     "description": "Plots to understand relationships between variables and model performance. This imports the Data Exploration template",
     "author": "Daniel Wang",
     "author_email": "daniel.wang@oliverwyman.com",
-    "read_more_link": "TBD"
+    "read_more_link": "https://github.com/ow-gryphon/gryphon-model-plotting-regression"
 }
