@@ -1,9 +1,9 @@
 {
     "display_name": "Plots for regression modeling",
     "command": "generate",
-    "dependencies": [],
+    "dependencies": ["pandas", "numpy", "matplotlib", "seaborn", "scipy", "jupyter"],
 
-    "keywords": ["Bivariate", "Regression"],
+    "keywords": ["Bivariate", "Regression", "Model diagnostics"],
     "methodology": ["Regression"],
     "topic": [],
 
