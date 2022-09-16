@@ -1,5 +1,5 @@
 {
-    "display_name": "Plots for regression modeling",
+    "display_name": "Plotting tools for regression modeling (bivariate, performance, and diagnostics plots)",
     "command": "generate",
     "dependencies": ["pandas", "numpy", "matplotlib", "seaborn", "scipy", "jupyter"],
 
