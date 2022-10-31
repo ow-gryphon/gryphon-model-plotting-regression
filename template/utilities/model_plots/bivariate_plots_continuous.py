@@ -4,7 +4,6 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 import matplotlib.pyplot as plt
-from . import exploration_utilities
 import seaborn as sns
 sns.reset_orig()
 import scipy.stats as ss
@@ -130,7 +129,6 @@ def bivariate_continuous(used_data, y_var, x_var, num_buckets=20, y_scale="linea
     # Apply the right transformations to axes
     ax1.set_yscale(y_scale)
     ax1.set_xscale(x_scale)
-
 
     return fig, plot_dataset
 
@@ -457,6 +455,7 @@ def segment_bivariate_continuous(used_data, y_var, x_var, segment_var, num_bucke
         df.plot(x = x_var, y = "count", kind="line", ax=ax[1], label=label, marker='o', linewidth=1)
     ax[1].set_title("Count for {} by {}".format(x_var, segment_var))
     ax[1].set_ylabel("Count")
+    ax[1].set_xscale(x_scale)    
     plt.legend()
 
     return fig, plot_data
@@ -502,13 +501,17 @@ def segment_bivariate_categorical(used_data, y_var, x_var, segment_var, discrete
     ax[0].set_yscale(y_scale)  
     ax[0].set_xlabel(x_var)
     ax[0].set_ylabel(y_var)
-    plt.xticks(rotation=90)
+    
+    if not discrete:
+        ax[0].set_xticks(range(df.shape[0]),df[x_var], rotation=45, ha='right')
 
     for label, df in plot_data.groupby('Segment'):
         df.plot(x = x_var, y = "count", kind="line", ax=ax[1], label=label, marker='o', linewidth=1)
     ax[1].set_title("Count for {} by {}".format(x_var, segment_var))
     ax[1].set_ylabel("Count")
-    plt.xticks(rotation=90)
+    
+    if not discrete:
+        ax[1].set_xticks(range(df.shape[0]),df[x_var], rotation=45, ha='right')
     plt.legend()
 
     return fig, plot_data
