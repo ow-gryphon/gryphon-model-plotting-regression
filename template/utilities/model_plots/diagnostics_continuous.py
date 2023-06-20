@@ -113,7 +113,7 @@ def act_vs_pred_plot(used_data, actual_var, pred_var, num_buckets=20,
                    color="blue", linewidths=3)
     
     ax1.set_ylabel(actual_var)
-    ax1.set_xlabel(x_var)
+    ax1.set_xlabel(pred_var)
     axs = [ax1]
 
     if with_count:
@@ -229,7 +229,7 @@ def model_comparison_continuous(used_data, actual_var, pred_var, x_var, num_buck
     ax1.set_position([box.x0, box.y0, box.width * 0.8, box.height])
 
     # Put a legend to the right of the current axis
-    ax1.legend([act_line, pred_line], ['Actual', 'Predicted'], loc='center left', bbox_to_anchor=(1, 0.5))
+    ax1.legend([act_line, pred_line], ['Actual', 'Predicted'], loc='center left', bbox_to_anchor=(1.15, 0.5))
     fig.tight_layout()
     plt.show()
     
@@ -329,7 +329,7 @@ def model_comparison_categorical(used_data, actual_var, pred_var, x_var, discret
     ax1.set_position([box.x0, box.y0, box.width * 0.8, box.height])
 
     # Put a legend to the right of the current axis
-    ax1.legend([act_line, pred_line], ['Actual', 'Predicted'], loc='center left', bbox_to_anchor=(1, 0.5))
+    ax1.legend([act_line, pred_line], ['Actual', 'Predicted'], loc='center left', bbox_to_anchor=(1.15, 0.5))
 
     fig.tight_layout()
     plt.show()
